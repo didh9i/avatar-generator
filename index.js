@@ -106,6 +106,7 @@ const hashFromUsername = (username) => {
       })
     })
 
+    image.resize(256, 256, Jimp.RESIZE_NEAREST_NEIGHBOR)
     image.write(`avatars/${username}.png`, (err) => {
       if (err) throw err
     })

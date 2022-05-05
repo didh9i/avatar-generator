@@ -1,38 +1,136 @@
 # avatar-generator
-My NodeJS avatar generator project
+Генератор аватарок написаный на NodeJS
 
-Examples:<br>
-` 41_4j1        `<img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/41_4j1.png" alt="41_4j1" width="64" height="64" />
-` 999999        `<img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/999999.png" alt="41_4j1" width="64" height="64" />
-` AAAA          `<img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/AAAA.png" alt="41_4j1" width="64" height="64" />
-` cclarice      `<img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/cclarice.png" alt="41_4j1" width="64" height="64" /><br>
-` Create        `<img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/Create.png" alt="41_4j1" width="64" height="64" />
-` Creature      `<img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/Creature.png" alt="41_4j1" width="64" height="64" />
-` Delete        `<img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/Delete.png" alt="41_4j1" width="64" height="64" />
-` kedra         `<img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/kedra.png" alt="41_4j1" width="64" height="64" /><br>
-` Nikabrine     `<img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/Nikabrine.png" alt="41_4j1" width="64" height="64" />
-` oredan        `<img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/oredan.png" alt="41_4j1" width="64" height="64" />
-` oreum         `<img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/oreum.png" alt="41_4j1" width="64" height="64" />
-` OreumSpace    `<img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/OreumSpace.png" alt="41_4j1" width="64" height="64" /><br>
-` Schnazzy      `<img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/Schnazzy.png" alt="41_4j1" width="64" height="64" />
-` sglypa        `<img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/sglypa.png" alt="41_4j1" width="64" height="64" />
-` SmartData     `<img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/SmartData.png" alt="41_4j1" width="64" height="64" />
-` tatcray       `<img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/tatcray.png" alt="41_4j1" width="64" height="64" /><br>
-` TRIPIX        `<img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/TRIPIX.png" alt="41_4j1" width="64" height="64" />
-` youtube       `<img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/youtube.png" alt="41_4j1" width="64" height="64" />
-` Zorroo        `<img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/Zorroo.png" alt="41_4j1" width="64" height="64" />
-` Алина         `<img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/Алина.png" alt="41_4j1" width="64" height="64" /><br>
-` Андрей        `<img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/Андрей.png" alt="41_4j1" width="64" height="64" />
-` Данил         `<img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/Данил.png" alt="41_4j1" width="64" height="64" />
-` дерево        `<img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/дерево.png" alt="41_4j1" width="64" height="64" />
-` Дима          `<img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/Дима.png" alt="41_4j1" width="64" height="64" /><br>
-` Дыня `<img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/Дыня.png" alt="41_4j1" width="64" height="64" />
-` Евгений `<img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/Евгений.png" alt="41_4j1" width="64" height="64" />
-` Женя `<img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/Женя.png" alt="41_4j1" width="64" height="64" />
-` Никита `<img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/Никита.png" alt="41_4j1" width="64" height="64" /><br>
-` облако `<img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/облако.png" alt="41_4j1" width="64" height="64" />
-` сглыпа `<img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/сглыпа.png" alt="41_4j1" width="64" height="64" />
-` таткрей `<img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/таткрей.png" alt="41_4j1" width="64" height="64" />
-` Ушки_Тристаны `<img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/Ушки_Тристаны.png" alt="41_4j1" width="64" height="64" /><br>
+## Установка:
+`npm install`
+
+## Запуск:
+`npm run start`
+
+## Вводите ники через пробел
+`nickname1 username2`
+
+<table>
+  <thead><tr><td colspan="4" align="center"> Примеры / Examples </td></tr></thead>
+  <tbody>
+    <tr>
+      <td>alpewa</td>
+      <td>Boztaev</td>
+      <td>c1ever</td>
+      <td>CloudLight</td>
+    </tr>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/alpewa.png" width="64"></td>
+      <td><img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/Boztaev.png" width="64"></td>
+      <td><img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/c1ever.png" width="64"></td>
+      <td><img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/CloudLight.png" width="64"></td>
+    </tr>
+    <tr>
+      <td colspan="4" align="center">&nbsp;</td></tr>
+    </tr>
+    <tr>
+      <td>Darkest_Gothic</td>
+      <td>epshepsh</td>
+      <td>ForestOrc</td>
+      <td>ImSoGiGh</td>
+    </tr>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/Darkest_Gothic.png" width="64"></td>
+      <td><img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/epshepsh.png" width="64"></td>
+      <td><img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/ForestOrc.png" width="64"></td>
+      <td><img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/ImSoGiGh.png" width="64"></td>
+    </tr>
+    <tr>
+      <td colspan="4" align="center">&nbsp;</td></tr>
+    </tr>
+    <tr>
+      <td>INEX</td>
+      <td>kedra</td>
+      <td>Lizer</td>
+      <td>Nikabrine</td>
+    </tr>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/INEX.png" width="64"></td>
+      <td><img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/kedra.png" width="64"></td>
+      <td><img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/Lizer.png" width="64"></td>
+      <td><img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/Nikabrine.png" width="64"></td>
+    </tr>
+    <tr>
+      <td colspan="4" align="center">&nbsp;</td></tr>
+    </tr>
+    <tr>
+      <td>oreum</td>
+      <td>OreumSpace</td>
+      <td>Raskalc</td>
+      <td>SAIL</td>
+    </tr>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/oreum.png" width="64"></td>
+      <td><img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/OreumSpace.png" width="64"></td>
+      <td><img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/Raskalc.png" width="64"></td>
+      <td><img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/SAIL.png" width="64"></td>
+    </tr>
+    <tr>
+      <td colspan="4" align="center">&nbsp;</td></tr>
+    </tr>
+    <tr>
+      <td>Schnazzy</td>
+      <td>sloth</td>
+      <td>tatcray</td>
+      <td>Tripix</td>
+    </tr>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/Schnazzy.png" width="64"></td>
+      <td><img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/sloth.png" width="64"></td>
+      <td><img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/tatcray.png" width="64"></td>
+      <td><img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/Tripix.png" width="64"></td>
+    </tr>
+    <tr>
+      <td colspan="4" align="center">&nbsp;</td></tr>
+    </tr>
+    <tr>
+      <td>urazov</td>
+      <td>Valentine</td>
+      <td>vragnomer1</td>
+      <td>Worst</td>
+    </tr>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/urazov.png" width="64"></td>
+      <td><img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/Valentine.png" width="64"></td>
+      <td><img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/vragnomer1.png" width="64"></td>
+      <td><img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/Worst.png" width="64"></td>
+    </tr>
+    <tr>
+      <td colspan="4" align="center">&nbsp;</td></tr>
+    </tr>
+    <tr>
+      <td>XelTiZDeeD</td>
+      <td>Бодя</td>
+      <td>Дыня</td>
+      <td>Евген</td>
+    </tr>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/XelTiZDeeD.png" width="64"></td>
+      <td><img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/Бодя.png" width="64"></td>
+      <td><img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/Дыня.png" width="64"></td>
+      <td><img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/Евген.png" width="64"></td>
+    </tr>
+    <tr>
+      <td colspan="4" align="center">&nbsp;</td></tr>
+    </tr>
+    <tr>
+      <td>Минас</td>
+      <td>облако</td>
+      <td>Ушки_Тристаны</td>
+      <td>Цитрус</td>
+    </tr>
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/Минас.png" width="64"></td>
+      <td><img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/облако.png" width="64"></td>
+      <td><img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/Ушки_Тристаны.png" width="64"></td>
+      <td><img src="https://raw.githubusercontent.com/oredan/avatar-generator/master/avatars/Цитрус.png" width="64"></td>
+    </tr>
+  </tbody>
+</table>
 
 

@@ -1,4 +1,14 @@
 {
+  "name": "avatar-generator",
+  "version": "1.0.0",
+  "description": "My NodeJS avatar generator project",
+  "main": "index.js",
+  "repository": "https://github.com/oredan/avatar-generator",
+  "author": "oredan",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
   "devDependencies": {
     "jimp": "^0.16.1"
   }

@@ -11,13 +11,13 @@ const pixel = (upper: Array<number>, bottom: Array<number>) => {
   return `${esc}[48;2;${upper[0]};${upper[1]};${upper[2]}m${esc}[38;2;${bottom[0]};${bottom[1]};${bottom[2]}m▄`
 }
 
-export default function ConsoleImage (image: Jimp): void {
+export default function ConsoleImage (image: Jimp, name = ''): void {
   const w = image.bitmap.width, h = image.bitmap.height
   const pixels = Array.from(image.bitmap.data)
   let output = ''
   let ptr = 0
 
-  console.log(`[Image ${w + '✕' + h}]`)
+  console.log(`[Image ${name} ${w + '✕' + h}]`)
   while (ptr + w * 4 < pixels.length) {
     output += pixel(pixels.slice(ptr, ptr + 4), pixels.slice(ptr + w * 4, ptr + w * 4+ 4))
     ptr += 4

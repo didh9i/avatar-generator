@@ -6,10 +6,11 @@ import ConsoleImage from './src/ConsoleImage'
 
 const rl = readline.createInterface({
   input: process.stdin,
-  output: process.stdout,
+  output: process.stdout
 })
 
 let mode = 'default'
+let action = 'default'
 
 rl.addListener('line', line => {
   if (line[0] === '/') {
@@ -36,19 +37,60 @@ rl.addListener('line', line => {
       return
     }
 
+    if (line === '/all') {
+      action = 'default'
+      console.log('Action set to "default"')
+      return
+    }
+
+    if (line === '/display') {
+      action = 'display'
+      console.log('Action set to "display"')
+      return
+    }
+
+    if (line === '/save') {
+      action = 'save'
+      console.log('Action set to "save"')
+      return
+    }
+
     console.warn('Unknown command')
-  } else if (usernameRegExp.test(line)) {
-    if (mode === 'avatar' || mode === 'default') {
-      const avatar = new Avatar(line)
-      // ConsoleImage(avatar.image)
-      avatar.save()
-    }
-    if (mode === 'skin' || mode === 'default') {
-      const skin = new Skin(line)
-      ConsoleImage(skin.image.clone().crop(0, 0, 64, 32))
-      skin.save()
-    }
   } else {
-    console.warn('Invalid Username')
+    const time = Date.now()
+    const usernames = line.split(' ')
+    for (const username of usernames) {
+      if (usernameRegExp.test(username)) {
+        if (mode === 'avatar' || mode === 'default') {
+          const avatar = new Avatar(username)
+          if (action === 'display' || action === 'all') {
+            ConsoleImage(avatar.image, username)
+          }
+          if (action === 'save' || action === 'default') {
+            avatar.save(32)
+          }
+        }
+        if (mode === 'skin' || mode === 'default') {
+          const skin = new Skin(username)
+          if (action === 'display' || action === 'default') {
+            ConsoleImage(skin.image.clone()
+              .crop(0, 0, 64, 32), username)
+          }
+          if (action === 'save' || action === 'default') {
+            skin.save()
+          }
+        }
+      }
+      else {
+        console.warn(`Invalid Username "${username}"`)
+      }
+    }
+
+    if (usernames.length > 4) {
+      const diff = Date.now() - time
+      const sec = diff / 1000
+      console.log(sec, 'sec.')
+    }
+
   }
 })

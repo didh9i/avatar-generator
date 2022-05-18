@@ -1,170 +1,41 @@
 export interface Theme {
   id: number,
-  name: string,
   colors: Array<number>
 }
 
-const themes: Array<Theme> = [
-  {
-    id: 0,
-    name: 'Rosy Dew',
-    colors: [0xF9F1F0FF, 0xFADCD9FF, 0xF8AFA6FF, 0xF79489FF]
-  },
-  {
-    id: 1,
-    name: 'Summer Splash',
-    colors: [0x05445EFF, 0x189AB4FF, 0x75E6DAFF, 0xD4F1F4FF]
-  },
-  {
-    id: 2,
-    name: 'The Deep Blue',
-    colors: [0x050A30FF, 0x000C66FF, 0x0000FFFF, 0x7EC8E3FF]
-  },
-  {
-    id: 3,
-    name: 'Retro Punch',
-    colors: [0x2FF3E0FF, 0xF8D210FF, 0xFA26A0FF, 0xF51720FF]
-  },
-  {
-    id: 4,
-    name: 'Healthy Leaves',
-    colors: [0x3D550CFF, 0x81B622FF, 0xECF87FFF, 0x59981AFF]
-  },
-  {
-    id: 5,
-    name: 'Emerald Entrance',
-    colors: [0xB68D40FF, 0xF4EBD0FF, 0x122620FF, 0xD6AD60FF]
-  },
-  {
-    id: 6,
-    name: 'Cheeky Marguerita',
-    colors: [0x0A7029FF, 0xFEDE00FF, 0xC8DF52FF, 0xDBE8D8FF]
-  },
-  {
-    id: 7,
-    name: 'Green Blaze',
-    colors: [0x76B947FF, 0xB1D8B7FF, 0x2F5233FF, 0x94C973FF]
-  },
-  {
-    id: 8,
-    name: 'Bubbly Banana',
-    colors: [0x15B5B0FF, 0xF9BDC0FF, 0xFBE698FF, 0x6DECE0FF]
-  },
-  {
-    id: 9,
-    name: 'Sunlit Eggplant',
-    colors: [0xEFD3B5FF, 0x5F093DFF, 0xB21368FF, 0xD67BA8FF]
-  },
-  {
-    id: 10,
-    name: 'Purple Fabric',
-    colors: [0xBEAFC2FF, 0x695E93FF, 0x8155BAFF, 0x281C2DFF]
-  },
-  {
-    id: 11,
-    name: 'Wild Orchid',
-    colors: [0x005437FF, 0xDEBAD6FF, 0x340744FF, 0x741AACFF]
-  },
-  {
-    id: 12,
-    name: 'Dark Road Curve',
-    colors: [0x0A0708FF, 0x444444FF, 0x747474FF, 0xB1B1B1FF]
-  },
-  {
-    id: 13,
-    name: 'Colorful Powder Cracks',
-    colors: [0x54086BFF, 0xFF0BACFF, 0x00BEC5FF, 0x050833FF]
-  },
-  {
-    id: 14,
-    name: 'Style and Grace',
-    colors: [0x000000FF, 0xF41F4EFF, 0xFBFBFBFF, 0xFFC2C7FF]
-  },
-  {
-    id: 15,
-    name: 'Beautiful Abstraction',
-    colors: [0x0000FFFF, 0x4B7BF5FF, 0x79A9F5FF, 0xC2E2F5FF]
-  },
-  {
-    id: 16,
-    name: 'Peach Party',
-    colors: [0x190204FF, 0xFF8976FF, 0xCB4E47FF, 0xFFCBA4FF]
-  },
-  {
-    id: 17,
-    name: 'Strong and Curved',
-    colors: [0x006884FF, 0x053D57FF, 0xF2F1EFFF, 0x97BCC7FF]
-  },
-  {
-    id: 18,
-    name: 'Bird of Prey',
-    colors: [0xFFDB15FF, 0x020301FF, 0xB5A197FF, 0xF3F5F9FF]
-  },
-  {
-    id: 19,
-    name: 'Sunset Sightings',
-    colors: [0xF9E9D0FF, 0xDB8780FF, 0xA30052FF, 0x26161FFF]
-  },
-  {
-    id: 20,
-    name: 'Morning Dew',
-    colors: [0x31ED31FF, 0x10BC10FF, 0x11A7BBFF, 0x2AB67BFF]
-  },
-  {
-    id: 21,
-    name: 'Market Tourist',
-    colors: [0xADD3D0FF, 0x970C10FF, 0x153250FF, 0xFEFCFFFF]
-  },
-  {
-    id: 22,
-    name: 'Earth Hands',
-    colors: [0x4F3750FF, 0xCB9870FF, 0x8D8960FF, 0xAAA1A0FF]
-  },
-  {
-    id: 23,
-    name: 'Crimson and Blues',
-    colors: [0xFF2768FF, 0xA3A3B7FF, 0x1B4A56FF, 0xF2EEF7FF]
-  },
-  {
-    id: 24,
-    name: 'Secret Keeper',
-    colors: [0xFC4DB0FF, 0xF9E830FF, 0x221530FF, 0xF52870FF]
-  },
-  {
-    id: 25,
-    name: 'Endless Cubes',
-    colors: [0x34DED0FF, 0x94FAF0FF, 0x3AF7F0FF, 0x31D1D0FF]
-  },
-  {
-    id: 26,
-    name: 'One-Man Show',
-    colors: [0xCDBDB2FF, 0x89ACAAFF, 0xBB616CFF, 0x183A50FF]
-  },
-  {
-    id: 27,
-    name: 'Frosted Berries',
-    colors: [0x3B2244FF, 0xCC3A73FF, 0xB4B8F5FF, 0xDDE0FFFF]
-  },
-  {
-    id: 28,
-    name: 'Leafy Touch',
-    colors: [0x1F3750FF, 0x294A41FF, 0x518060FF, 0x89ACA0FF]
-  },
-  {
-    id: 29,
-    name: 'Cool Hair',
-    colors: [0xFFECDDFF, 0xFFC1C5FF, 0xFF0BACFF, 0xFBF900FF]
-  },
-  {
-    id: 30,
-    name: 'Following the Sun',
-    colors: [0xF0E8D1FF, 0xFF4500FF, 0xFDF344FF, 0x111F29FF]
-  },
-  {
-    id: 31,
-    name: 'Market Stall',
-    colors: [0xC383B5FF, 0x2D1324FF, 0xC8BCC3FF, 0xA91D92FF]
+interface RawTheme {
+  id: number,
+  colors: Array<string>
+}
+
+// https://coolors.co/9e788f-a9b3ce-7cdedc-7284a8-474954
+/*
+ window.location.pathname.slice(8).split('-').map((el) => '0x' + el + 'ff')
+
+ const themes = []
+
+ document.addEventListener('keydown', (event) => {
+ if (event.code === 'Space' && themes.length < 256) {
+ themes.push({
+ id: themes.length,
+ colors: window.location.pathname.slice(8).split('-').map((el) => '0x' + el + 'ff')
+ })
+ }
+ if (themes.length >= 256) {
+ console.log('done')
+ }
+ })
+
+ JSON.stringify(themes)
+ */
+
+const raw_themes: Array<RawTheme> = JSON.parse('[{"id":0,"colors":["0x005377ff","0x06a77dff","0xd5c67aff","0xf1a208ff"]},{"id":1,"colors":["0xb5446eff","0x525252ff","0xbadefcff","0x0affedff"]},{"id":2,"colors":["0x593f62ff","0x7b6d8dff","0x8499b1ff","0xa5c4d4ff"]},{"id":3,"colors":["0x9b6a6cff","0xb09398ff","0xcedfd9ff","0xebfcfbff"]},{"id":4,"colors":["0x0b7a75ff","0xd7c9aaff","0x7b2d26ff","0xf0f3f5ff"]},{"id":5,"colors":["0x575c55ff","0x6c7d47ff","0x96a13aff","0xacc12fff"]},{"id":6,"colors":["0xeb8258ff","0xf6f740ff","0xd8dc6aff","0x6689a1ff"]},{"id":7,"colors":["0x5c415dff","0xf6f7ebff","0xe94f37ff","0x393e41ff"]},{"id":8,"colors":["0x2c365eff","0x484d6dff","0x4b8f8cff","0xc5979dff"]},{"id":9,"colors":["0xc8c6afff","0x95a78dff","0xbd897eff","0xf87666ff"]},{"id":10,"colors":["0x2a1e5cff","0x0a0f0dff","0xc4cbcaff","0x3cbbb1ff"]},{"id":11,"colors":["0x34312dff","0x7e7f83ff","0xd9c5b2ff","0xf3f3f4ff"]},{"id":12,"colors":["0xfe5f55ff","0xd6d1b1ff","0xc7efcfff","0xeef5dbff"]},{"id":13,"colors":["0x373d20ff","0x717744ff","0xbcbd8bff","0x766153ff"]},{"id":14,"colors":["0xccddb7ff","0x6a5b6eff","0xf0b7b3ff","0xa833b9ff"]},{"id":15,"colors":["0xa6b1e1ff","0xb4869fff","0x985f6fff","0x4e4c67ff"]},{"id":16,"colors":["0x42bfddff","0xbbe6e4ff","0xf0f6f6ff","0xff66b3ff"]},{"id":17,"colors":["0xc28caeff","0xd0aba0ff","0xdec4a1ff","0xedcf8eff"]},{"id":18,"colors":["0x8c2f39ff","0xb23a48ff","0xfcb9b2ff","0xfed0bbff"]},{"id":19,"colors":["0xe3b5a4ff","0xf5e9e2ff","0x0b0014ff","0xd44d5cff"]},{"id":20,"colors":["0x030027ff","0xf2f3d9ff","0xdc9e82ff","0xc16e70ff"]},{"id":21,"colors":["0x508991ff","0x172a3aff","0x004346ff","0x09bc8aff"]},{"id":22,"colors":["0xe2dcdeff","0xceb1beff","0xb97375ff","0x2d2d34ff"]},{"id":23,"colors":["0x29524aff","0x94a187ff","0xc5afa0ff","0xe9bcb7ff"]},{"id":24,"colors":["0xfde74cff","0x9bc53dff","0xc3423fff","0x211a1eff"]},{"id":25,"colors":["0xd90368ff","0x820263ff","0x291720ff","0x04a777ff"]},{"id":26,"colors":["0xb49a67ff","0xceb3abff","0xc4c6e7ff","0xbaa5ffff"]},{"id":27,"colors":["0x7798abff","0xc3dbc5ff","0xe8dcb9ff","0xf2cee6ff"]},{"id":28,"colors":["0x59c9a5ff","0xd81e5bff","0x23395bff","0xfffd98ff"]},{"id":29,"colors":["0xc8d5b9ff","0x8fc0a9ff","0x68b0abff","0x696d7dff"]},{"id":30,"colors":["0x7c99b4ff","0x6b7f82ff","0x5b5750ff","0x492c1dff"]},{"id":31,"colors":["0xa08794ff","0xbb7e8cff","0xc9b6beff","0xd1becfff"]},{"id":32,"colors":["0xeee5e9ff","0x7c7c7cff","0x92dce5ff","0x52dee5ff"]},{"id":33,"colors":["0x89043dff","0x2fe6deff","0x1c3041ff","0x18f2b2ff"]},{"id":34,"colors":["0x9dc5bbff","0x17b890ff","0x5e807fff","0x082d0fff"]},{"id":35,"colors":["0xeda2f2ff","0xdc6badff","0x8c7aa9ff","0x7192beff"]},{"id":36,"colors":["0x95818dff","0x576066ff","0x2c514cff","0x122932ff"]},{"id":37,"colors":["0xe85f5cff","0x9cfffaff","0x773344ff","0xe3b5a4ff"]},{"id":38,"colors":["0xb2bcaaff","0x838e83ff","0x6c6061ff","0x64403eff"]},{"id":39,"colors":["0x353831ff","0x38423bff","0x3f5e5aff","0x20fc8fff"]},{"id":40,"colors":["0x636940ff","0x59a96aff","0x9bdeacff","0xb4e7ceff"]},{"id":41,"colors":["0x618985ff","0x414535ff","0xf2e3bcff","0xc19875ff"]},{"id":42,"colors":["0x685762ff","0x9b9987ff","0xefa9aeff","0xe55381ff"]},{"id":43,"colors":["0xa3c4bcff","0xbfd7b5ff","0xe7efc5ff","0xf2e7c9ff"]},{"id":44,"colors":["0xfb6376ff","0xfcb1a6ff","0xffdcccff","0xfff9ecff"]},{"id":45,"colors":["0x477998ff","0x291f1eff","0xf64740ff","0xa3333dff"]},{"id":46,"colors":["0xfffff2ff","0x791e94ff","0xde6449ff","0x407899ff"]},{"id":47,"colors":["0xf8bdc4ff","0xf497daff","0xf679e5ff","0xf65be3ff"]},{"id":48,"colors":["0xd0a98fff","0x4d243dff","0xcac2b5ff","0xecdcc9ff"]},{"id":49,"colors":["0x90a583ff","0x9d8420ff","0x942911ff","0x593837ff"]},{"id":50,"colors":["0x59c9a5ff","0xd81e5bff","0x23395bff","0xfffd98ff"]},{"id":51,"colors":["0xa9cbb7ff","0xf7ff58ff","0xff934fff","0x5e565aff"]},{"id":52,"colors":["0xd3c4e3ff","0x8f95d3ff","0x89daffff","0x58504aff"]},{"id":53,"colors":["0x95b8d1ff","0xb8e0d2ff","0xd6eadfff","0xeac4d5ff"]},{"id":54,"colors":["0x912f56ff","0x521945ff","0x361f27ff","0x0d090aff"]},{"id":55,"colors":["0x7fbeebff","0xafbed1ff","0xeac5d8ff","0xdbd8f0ff"]},{"id":56,"colors":["0x7d83ffff","0x007fffff","0x1affd5ff","0x590925ff"]},{"id":57,"colors":["0x586a6aff","0xb9a394ff","0xd4c5c7ff","0xdad4efff"]},{"id":58,"colors":["0xb98b82ff","0xe4959eff","0x37515fff","0x1f0812ff"]},{"id":59,"colors":["0xfc7a57ff","0xfcd757ff","0xeefc57ff","0x5e5b52ff"]},{"id":60,"colors":["0x7d98a1ff","0x5e6572ff","0xa9b4c2ff","0xeef1efff"]},{"id":61,"colors":["0x3c6e71ff","0xffffffff","0xd9d9d9ff","0x284b63ff"]},{"id":62,"colors":["0xbabd8dff","0xffdac6ff","0xfa9500ff","0xeb6424ff"]},{"id":63,"colors":["0x63a088ff","0x56638aff","0x483a58ff","0x56203dff"]},{"id":64,"colors":["0x2b4570ff","0xa8d0dbff","0xe49273ff","0xa37a74ff"]},{"id":65,"colors":["0xbdbea9ff","0x8db38bff","0x56876dff","0x04724dff"]},{"id":66,"colors":["0x2a1a1fff","0x764134ff","0xad8350ff","0xafa060ff"]},{"id":67,"colors":["0x6f9283ff","0x8d9f87ff","0xcdc6a5ff","0xf0dccaff"]},{"id":68,"colors":["0x758ecdff","0xc1cefeff","0x7189ffff","0x624cabff"]},{"id":69,"colors":["0x5d737eff","0xfff07cff","0xf0f7eeff","0x87bba2ff"]},{"id":70,"colors":["0x35605aff","0x6b818cff","0xd8e4ffff","0x31e981ff"]},{"id":71,"colors":["0x474a48ff","0x909590ff","0x9ae19dff","0x537a5aff"]},{"id":72,"colors":["0x00a7e1ff","0xeddea4ff","0xf7a072ff","0xff9b42ff"]},{"id":73,"colors":["0xaceca1ff","0x96be8cff","0x629460ff","0x243119ff"]},{"id":74,"colors":["0x7b886fff","0xb4dc7fff","0xfeffa5ff","0xffa0acff"]},{"id":75,"colors":["0xf7d488ff","0xeaefb1ff","0xe9f7caff","0xceb5a7ff"]},{"id":76,"colors":["0x95bf74ff","0x659b5eff","0x556f44ff","0x283f3bff"]},{"id":77,"colors":["0xf18f01ff","0xadcad6ff","0x99c24dff","0x41bbd9ff"]},{"id":78,"colors":["0xef767aff","0x7d7abcff","0x6457a6ff","0xffe347ff"]},{"id":79,"colors":["0xf79d65ff","0xf4845fff","0xf27059ff","0xf25c54ff"]},{"id":80,"colors":["0xff3e41ff","0xdf367cff","0x883955ff","0x4c3549ff"]},{"id":81,"colors":["0xc4b2bcff","0xa29587ff","0x846c5bff","0x332e3cff"]},{"id":82,"colors":["0xba5a31ff","0x0c0c0cff","0x69dc9eff","0xffffffff"]},{"id":83,"colors":["0x533b4dff","0xf564a9ff","0xfaa4bdff","0xfae3c6ff"]},{"id":84,"colors":["0x6883baff","0xf9f9f9ff","0xe072a4ff","0xb0e298ff"]},{"id":85,"colors":["0x86deb7ff","0x63b995ff","0x50723cff","0x423e28ff"]},{"id":86,"colors":["0xaed4e6ff","0xaf7595ff","0x8c2155ff","0x5c1a1bff"]},{"id":87,"colors":["0xe56399ff","0x7f96ffff","0xa6cfd5ff","0xdbfcffff"]},{"id":88,"colors":["0x140d4fff","0x4ea699ff","0x2dd881ff","0x6fedb7ff"]},{"id":89,"colors":["0xa38560ff","0xc6a15bff","0xf2e86dff","0xd3dfb8ff"]},{"id":90,"colors":["0xf00699ff","0x454e9eff","0x018e42ff","0xf7d002ff"]},{"id":91,"colors":["0xbfacc8ff","0xc8c6d7ff","0x783f8eff","0x4f1271ff"]},{"id":92,"colors":["0xf71735ff","0x41ead4ff","0xfdfffcff","0xff9f1cff"]},{"id":93,"colors":["0x8aa39bff","0x95d9c3ff","0xa4f9c8ff","0xa7fff6ff"]},{"id":94,"colors":["0x8daa9dff","0x522b47ff","0x7b0828ff","0x0f0e0eff"]},{"id":95,"colors":["0x856a5dff","0xccc9e7ff","0x6c6f7dff","0x2e3138ff"]},{"id":96,"colors":["0x387d7aff","0x32936fff","0x26a96cff","0x2bc016ff"]},{"id":97,"colors":["0xe7dfe8ff","0xe4dee4ff","0xaf9fa5ff","0x92898aff"]},{"id":98,"colors":["0xf1f7edff","0x91c7b1ff","0xb33951ff","0xe3d081ff"]},{"id":99,"colors":["0x0582caff","0x006494ff","0x003554ff","0x051923ff"]},{"id":100,"colors":["0xb1b7d1ff","0x9b9fb5ff","0x8c7284ff","0x7a6174ff"]},{"id":101,"colors":["0x4b3f72ff","0xffc857ff","0x119da4ff","0x19647eff"]},{"id":102,"colors":["0xe2afdeff","0xd3c2ceff","0xd3d2c7ff","0xe2e1b9ff"]},{"id":103,"colors":["0xf5efedff","0x2292a4ff","0xbdbf09ff","0xd96c06ff"]},{"id":104,"colors":["0xdccfecff","0xa997dfff","0x4f517dff","0x1a3a3aff"]},{"id":105,"colors":["0xceeaf7ff","0xccd7e4ff","0xd5c9dfff","0xdcb8cbff"]},{"id":106,"colors":["0xffd9ceff","0x593c8fff","0x8ef9f3ff","0x171738ff"]},{"id":107,"colors":["0x090c9bff","0x3066beff","0xb4c5e4ff","0xfbfff1ff"]},{"id":108,"colors":["0xca5310ff","0xbb4d00ff","0x8f250cff","0x691e06ff"]},{"id":109,"colors":["0xff84e8ff","0x7f2ccbff","0x414361ff","0x2a2d43ff"]},{"id":110,"colors":["0x38040eff","0x640d14ff","0x800e13ff","0xad2831ff"]},{"id":111,"colors":["0x456990ff","0x49beaaff","0x49dcb1ff","0xeeb868ff"]},{"id":112,"colors":["0x454955ff","0xf3eff5ff","0x72b01dff","0x3f7d20ff"]},{"id":113,"colors":["0xe07a5fff","0x3d405bff","0x81b29aff","0xf2cc8fff"]},{"id":114,"colors":["0xcb04a5ff","0x934683ff","0x65334dff","0x2d1115ff"]},{"id":115,"colors":["0x69140eff","0xa44200ff","0xd58936ff","0xfff94fff"]},{"id":116,"colors":["0x4ecdc4ff","0xffffffff","0xff6b6bff","0xffffffff"]},{"id":117,"colors":["0xf283b6ff","0xedbfb7ff","0xb5bfa1ff","0x6e9887ff"]},{"id":118,"colors":["0x6c969dff","0x645e9dff","0x392b58ff","0x2d0320ff"]},{"id":119,"colors":["0xabfaa9ff","0x95a3b3ff","0x4c2c69ff","0x42253bff"]},{"id":120,"colors":["0x1effbcff","0x7c9299ff","0x1f01b9ff","0xb4e33dff"]},{"id":121,"colors":["0xa24936ff","0xd36135ff","0x282b28ff","0x83bca9ff"]},{"id":122,"colors":["0x583e23ff","0x13262fff","0xb0a084ff","0xe9e6ffff"]},{"id":123,"colors":["0x034748ff","0x1481baff","0x11b5e4ff","0x0caadcff"]},{"id":124,"colors":["0x4a5859ff","0xf4d6ccff","0xf4b860ff","0xc83e4dff"]},{"id":125,"colors":["0x801a86ff","0x645986ff","0x8fe388ff","0x58bc82ff"]},{"id":126,"colors":["0xbbacc1ff","0x80727bff","0x909580ff","0x545643ff"]},{"id":127,"colors":["0xfafaffff","0xe4d9ffff","0x273469ff","0x1e2749ff"]},{"id":128,"colors":["0x474747ff","0xf2af29ff","0x000000ff","0xe0e0ceff"]},{"id":129,"colors":["0x6c0e23ff","0xc42021ff","0xf3ffb9ff","0x3c1742ff"]},{"id":130,"colors":["0xab947eff","0x6f5e53ff","0x8a7968ff","0x593d3bff"]},{"id":131,"colors":["0x187795ff","0x38686aff","0xa3b4a2ff","0xcdc6aeff"]},{"id":132,"colors":["0xf3c98bff","0xdaa588ff","0xc46d5eff","0xf56960ff"]},{"id":133,"colors":["0xfffd77ff","0xffe882ff","0x388697ff","0x271033ff"]},{"id":134,"colors":["0x96897bff","0xdfd5a5ff","0xdbad6aff","0xcf995fff"]},{"id":135,"colors":["0x893168ff","0x4a1942ff","0x2e1c2bff","0x050404ff"]},{"id":136,"colors":["0x9d8ca1ff","0x9993b2ff","0xa7abddff","0xb4d4eeff"]},{"id":137,"colors":["0x6b8f71ff","0xaad2baff","0xd9fff5ff","0xb9f5d8ff"]},{"id":138,"colors":["0xbfacc8ff","0xc8c6d7ff","0x783f8eff","0x4f1271ff"]},{"id":139,"colors":["0xddedaaff","0xf0cf65ff","0xd7816aff","0xbd4f6cff"]},{"id":140,"colors":["0x0b4f6cff","0x01baefff","0xfbfbffff","0x040f16ff"]},{"id":141,"colors":["0x474a48ff","0x909590ff","0x9ae19dff","0x537a5aff"]},{"id":142,"colors":["0xfe621dff","0xfd5200ff","0x00cfc1ff","0x00ffe7ff"]},{"id":143,"colors":["0x7a8450ff","0xaebd93ff","0xbee7b8ff","0x95969dff"]},{"id":144,"colors":["0x29335cff","0xf3a712ff","0xa8c686ff","0x669bbcff"]},{"id":145,"colors":["0x503b31ff","0x705d56ff","0x9097c0ff","0xa7bbecff"]},{"id":146,"colors":["0x4cb963ff","0xa0eadeff","0x5c6784ff","0x1d263bff"]},{"id":147,"colors":["0x1b9aaaff","0xdddbcbff","0xf5f1e3ff","0xffffffff"]},{"id":148,"colors":["0x607b7dff","0x828e82ff","0xaaae8eff","0xe0e0e0ff"]},{"id":149,"colors":["0xc191a1ff","0xa4508bff","0x5f0a87ff","0x2f004fff"]},{"id":150,"colors":["0x357266ff","0xa3bbadff","0x65532fff","0x312509ff"]},{"id":151,"colors":["0x475b5aff","0x8d8e8eff","0xa3a9aaff","0xbbbbbfff"]},{"id":152,"colors":["0x3d314aff","0x684756ff","0x96705bff","0xab8476ff"]},{"id":153,"colors":["0xc9e3acff","0x90be6dff","0xea9010ff","0x37371fff"]},{"id":154,"colors":["0xc9b79cff","0x71816dff","0x342a21ff","0xda667bff"]},{"id":155,"colors":["0xbea8a7ff","0xc09891ff","0x775144ff","0x2a0800ff"]},{"id":156,"colors":["0xb6cb9eff","0x92b4a7ff","0x8c8a93ff","0x81667aff"]},{"id":157,"colors":["0xfaf3ddff","0xb8f2e6ff","0xaed9e0ff","0x5e6472ff"]},{"id":158,"colors":["0xf9dc5cff","0xf4fffdff","0x011936ff","0x465362ff"]},{"id":159,"colors":["0xafafdcff","0x8a84e2ff","0x84afe6ff","0x79beeeff"]},{"id":160,"colors":["0x17183bff","0xa11692ff","0xff4f79ff","0xffb49aff"]},{"id":161,"colors":["0x2b0504ff","0x874000ff","0xbc5f04ff","0xf4442eff"]},{"id":162,"colors":["0xf7a9a8ff","0x7d82b8ff","0x613f75ff","0xe5c3d1ff"]},{"id":163,"colors":["0xe84855ff","0xf9dc5cff","0x3185fcff","0xefbcd5ff"]},{"id":164,"colors":["0xf283b6ff","0xedbfb7ff","0xb5bfa1ff","0x6e9887ff"]},{"id":165,"colors":["0xb68cb8ff","0x6461a0ff","0x314cb6ff","0x0a81d1ff"]},{"id":166,"colors":["0xed217cff","0x2d3047ff","0xfffd82ff","0xff9b71ff"]},{"id":167,"colors":["0x995fa3ff","0x9a98b5ff","0xa0b9c6ff","0xa5f8d3ff"]},{"id":168,"colors":["0xbea8a7ff","0xc09891ff","0x775144ff","0x2a0800ff"]},{"id":169,"colors":["0xf7accfff","0xe8f0ffff","0x6874e8ff","0x392759ff"]},{"id":170,"colors":["0x4a442dff","0x386150ff","0x58b09cff","0xcaf7e2ff"]},{"id":171,"colors":["0x575d90ff","0x84a07cff","0xc3d350ff","0xe6f14aff"]},{"id":172,"colors":["0x222a68ff","0x654597ff","0xab81cdff","0xe2adf2ff"]},{"id":173,"colors":["0x688e26ff","0xfaa613ff","0xf44708ff","0xa10702ff"]},{"id":174,"colors":["0x7678edff","0xf7b801ff","0xf18701ff","0xf35b04ff"]},{"id":175,"colors":["0x386c0bff","0x38a700ff","0x31d843ff","0x3eff8bff"]},{"id":176,"colors":["0x5f506bff","0x6a6b83ff","0x76949fff","0x86bbbdff"]},{"id":177,"colors":["0xa9e5bbff","0xfcf6b1ff","0xf7b32bff","0x2d1e2fff"]},{"id":178,"colors":["0x1c5253ff","0xf3ffc6ff","0xc3eb78ff","0xb6174bff"]},{"id":179,"colors":["0x5fbff9ff","0xefe9f4ff","0x171d1cff","0x5863f8ff"]},{"id":180,"colors":["0x96c9dcff","0xf06c9bff","0xf9b9b7ff","0xf5d491ff"]},{"id":181,"colors":["0x413f54ff","0x5f5aa2ff","0x355691ff","0x3f4045ff"]},{"id":182,"colors":["0x878e88ff","0x96c0b7ff","0xd4dfc7ff","0xfef6c9ff"]},{"id":183,"colors":["0xe1ce7aff","0xebcfb2ff","0xc5baafff","0xffffffff"]},{"id":184,"colors":["0x99edccff","0xcb958eff","0xe36588ff","0x9a275aff"]},{"id":185,"colors":["0x5f0f40ff","0x9a031eff","0xcb793aff","0xfcdc4dff"]},{"id":186,"colors":["0xc7dfc5ff","0xf6feaaff","0xfce694ff","0x373737ff"]},{"id":187,"colors":["0xfe5f55ff","0x777da7ff","0x94c9a9ff","0xc6ecaeff"]},{"id":188,"colors":["0x35605aff","0x6b818cff","0xd8e4ffff","0x31e981ff"]},{"id":189,"colors":["0x698f3fff","0xfbfaf8ff","0xe7decdff","0x804e49ff"]},{"id":190,"colors":["0xff47daff","0xff87abff","0xfcc8c2ff","0xf5eccdff"]},{"id":191,"colors":["0x897c80ff","0xba8f95ff","0xcab6cdff","0xcfbcdfff"]},{"id":192,"colors":["0x317b22ff","0x67e0a3ff","0x7cf0bdff","0xaff9c9ff"]},{"id":193,"colors":["0x383b53ff","0x66717eff","0xd4d6b9ff","0xd1caa1ff"]},{"id":194,"colors":["0xf4f1bbff","0x9bc1bcff","0x5ca4a9ff","0xe6ebe0ff"]},{"id":195,"colors":["0x76b041ff","0x639a88ff","0x3a5683ff","0x2708a0ff"]},{"id":196,"colors":["0x475b5aff","0x8d8e8eff","0xa3a9aaff","0xbbbbbfff"]},{"id":197,"colors":["0x57467bff","0x7cb4b8ff","0x70f8baff","0xcafe48ff"]},{"id":198,"colors":["0x6db1bfff","0xffeaecff","0xf39a9dff","0x3f6c51ff"]},{"id":199,"colors":["0xe6fdffff","0xd9d7ddff","0xb07bacff","0x5f7367ff"]},{"id":200,"colors":["0xcdd5d1ff","0xb4a6abff","0x946e83ff","0x615055ff"]},{"id":201,"colors":["0xd4adcfff","0x856084ff","0x84e296ff","0xdde1e4ff"]},{"id":202,"colors":["0xabc4a1ff","0x9db4abff","0x8d9d90ff","0x878e76ff"]},{"id":203,"colors":["0x20a4f3ff","0x59f8e8ff","0x941c2fff","0x03191eff"]},{"id":204,"colors":["0x854d27ff","0xdd7230ff","0xf4c95dff","0xe7e393ff"]},{"id":205,"colors":["0xecdcb0ff","0xc1d7aeff","0x8cc084ff","0x968e85ff"]},{"id":206,"colors":["0x4c4c47ff","0x848fa5ff","0xc14953ff","0xe5dcc5ff"]},{"id":207,"colors":["0x153243ff","0x284b63ff","0xf4f9e9ff","0xeef0ebff"]},{"id":208,"colors":["0x2d232eff","0xe0ddcfff","0x534b52ff","0xf1f0eaff"]},{"id":209,"colors":["0x87cbacff","0x90ffdcff","0x8de4ffff","0x8ac4ffff"]},{"id":210,"colors":["0x786f52ff","0xfeb95fff","0xf71735ff","0xc2095aff"]},{"id":211,"colors":["0xa6f4dcff","0xaf90a9ff","0xa05c7bff","0x944654ff"]},{"id":212,"colors":["0xa3b18aff","0x588157ff","0x3a5a40ff","0x344e41ff"]},{"id":213,"colors":["0x84bcdaff","0xecc30bff","0xf37748ff","0xd56062ff"]},{"id":214,"colors":["0xe1dd8fff","0xe0777dff","0x4c86a8ff","0x477890ff"]},{"id":215,"colors":["0x855a5cff","0x8a8e91ff","0xb8d4e3ff","0xeeffdbff"]},{"id":216,"colors":["0x433e0eff","0x7c9082ff","0xa7a284ff","0xd0c88eff"]},{"id":217,"colors":["0xcfc0bdff","0xb8b8aaff","0x7f9183ff","0x586f6bff"]},{"id":218,"colors":["0x9e0059ff","0xff0054ff","0xff5400ff","0xffbd00ff"]},{"id":219,"colors":["0x3c153bff","0x89bd9eff","0xf0c987ff","0xdb4c40ff"]},{"id":220,"colors":["0x8c2f39ff","0xb23a48ff","0xfcb9b2ff","0xfed0bbff"]},{"id":221,"colors":["0x031927ff","0x9dd1f1ff","0x508aa8ff","0xc8e0f4ff"]},{"id":222,"colors":["0xd0e1d4ff","0xd9d2b6ff","0xe4be9eff","0x71697aff"]},{"id":223,"colors":["0xb59da4ff","0x85756eff","0x6d3d14ff","0x551b14ff"]},{"id":224,"colors":["0x907f9fff","0xa4a5aeff","0xb0c7bdff","0xb8ebd0ff"]},{"id":225,"colors":["0xa2c3a4ff","0x869d96ff","0x525b76ff","0x201e50ff"]},{"id":226,"colors":["0x9d96b8ff","0x9a7197ff","0x886176ff","0x7c5869ff"]},{"id":227,"colors":["0x82aeb1ff","0x93c6d6ff","0xa7acd9ff","0x9e8fb2ff"]},{"id":228,"colors":["0xd8c99bff","0xd8973cff","0xbd632fff","0x273e47ff"]},{"id":229,"colors":["0x1effbcff","0x7c9299ff","0x1f01b9ff","0xb4e33dff"]},{"id":230,"colors":["0xa08794ff","0xbb7e8cff","0xc9b6beff","0xd1becfff"]},{"id":231,"colors":["0x688e26ff","0xfaa613ff","0xf44708ff","0xa10702ff"]},{"id":232,"colors":["0xcb04a5ff","0x934683ff","0x65334dff","0x2d1115ff"]},{"id":233,"colors":["0xc5dac1ff","0xbcd0c7ff","0xa9b2acff","0x898980ff"]},{"id":234,"colors":["0xd5c6e0ff","0xaaa1c8ff","0x967aa1ff","0x192a51ff"]},{"id":235,"colors":["0xdbbea1ff","0xa37b73ff","0x3f292bff","0xd34f73ff"]},{"id":236,"colors":["0xdcbf85ff","0x8b635cff","0x60594dff","0x93a29bff"]},{"id":237,"colors":["0xbde4a8ff","0x9cc69bff","0x79b4a9ff","0x676f54ff"]},{"id":238,"colors":["0x74a4bcff","0xb6d6ccff","0xf1fec6ff","0xff3a20ff"]},{"id":239,"colors":["0xf7b2adff","0xceb7b3ff","0xb7b7b7ff","0x9abca7ff"]},{"id":240,"colors":["0x177e89ff","0x598381ff","0x8e936dff","0xa2ad59ff"]},{"id":241,"colors":["0x1c5253ff","0xf3ffc6ff","0xc3eb78ff","0xb6174bff"]},{"id":242,"colors":["0x3dfaffff","0x43c59eff","0x3d7068ff","0x14453dff"]},{"id":243,"colors":["0x9b6a6cff","0xb09398ff","0xcedfd9ff","0xebfcfbff"]},{"id":244,"colors":["0x89043dff","0x2fe6deff","0x1c3041ff","0x18f2b2ff"]},{"id":245,"colors":["0x001f54ff","0x034078ff","0x1282a2ff","0xfefcfbff"]},{"id":246,"colors":["0xfe7f2dff","0xfcca46ff","0xa1c181ff","0x619b8aff"]},{"id":247,"colors":["0x685155ff","0x7a6f9bff","0x8b85c1ff","0xd4cdf4ff"]},{"id":248,"colors":["0xe15554ff","0xe1bc29ff","0x3bb273ff","0x7768aeff"]},{"id":249,"colors":["0xf7c59fff","0xefefd0ff","0x004e89ff","0x1a659eff"]},{"id":250,"colors":["0xbc8da0ff","0xa04668ff","0xab4967ff","0x0c1713ff"]},{"id":251,"colors":["0xc6c7c4ff","0xa2999eff","0x846a6aff","0x353b3cff"]},{"id":252,"colors":["0xd7bcc8ff","0x98b6b1ff","0x629677ff","0x495d63ff"]},{"id":253,"colors":["0xedff86ff","0xfff5b2ff","0xd4fcc3ff","0x362c28ff"]},{"id":254,"colors":["0x8ea604ff","0xf5bb00ff","0xec9f05ff","0xbf3100ff"]},{"id":255,"colors":["0xce96a6ff","0xd1a7a0ff","0xd4cbb3ff","0xd2e0bfff"]}]')
+
+const themes: Array<Theme> = raw_themes.map((each) => {
+  return {
+    id: each.id,
+    colors: each.colors.map((color) => parseInt(color))
   }
-]
+})
 
 export default themes

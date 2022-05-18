@@ -145,13 +145,13 @@ export default class Skin {
       const image = this.image.clone()
 
       image.resize(8 * scale, 8 * scale, Jimp.RESIZE_NEAREST_NEIGHBOR)
-      image.write(`${dir}/${this.username}.png`, (err) => {
+      image.write(`output/${dir}/${this.username}.png`, (err) => {
         if (err) {
           throw err
         }
       })
     } else {
-      this.image.write(`${dir}/${this.username}.png`, (err) => {
+      this.image.write(`output/${dir}/${this.username}.png`, (err) => {
         if (err) {
           throw err
         }

@@ -1,15 +1,24 @@
 {
   "name": "avatar-generator",
-  "version": "1.0.0",
-  "description": "My NodeJS avatar generator project",
-  "main": "index.js",
+  "version": "1.1.0",
+  "description": "My NodeTS avatar generator project",
+  "main": "index.ts",
   "repository": "https://github.com/oredan/avatar-generator",
   "author": "oredan",
   "license": "MIT",
   "scripts": {
-    "start": "node index.js"
+    "start": "node dist/index.js",
+    "build": "npx tsc --watch",
+    "dev:start": "nodemon -q dist/index.js"
   },
   "devDependencies": {
-    "jimp": "^0.16.1"
+    "jimp": "^0.16.1",
+    "nodemon": "^2.0.16"
+  },
+  "dependencies": {
+    "@types/md5": "^2.3.2",
+    "@types/node": "^17.0.34",
+    "md5": "^2.3.0",
+    "typescript": "^4.6.4"
   }
 }

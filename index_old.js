@@ -12,7 +12,7 @@ const fs = require('fs')
 const readline = require('readline')
 const Jimp = require('jimp')
 const folder = 'avatars'
-const usernameRegexp = new RegExp(/^(?=[a-zA-ZА-Яа-я\d_]{3,16}$)(?!.*_{2})[^_].*[^_]$/)
+const usernameRegexp = new RegExp(/(?=[a-zA-ZА-Яа-я\d_]{3,16}$)/)
 const { themes } = require('./themes.js')
 const usernameChars = (() => {
   const char_A = 'A'.charCodeAt(0)
